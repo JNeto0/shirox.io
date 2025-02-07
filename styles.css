@@ -1,0 +1,168 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #612f91;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title{
+    color: white;
+}
+
+#app {
+    width: 90%;
+    max-width: 600px;
+    margin: 80px auto 20px; /* Ajuste para evitar sobreposição com o banner */
+    text-align: center;
+    padding-left: 80px; /* Espaço para compensar o menu lateral */
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="url"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #ff8928;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-item {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.video-item iframe {
+    border-radius: 8px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    width: 360px;
+    height: 640px;
+    max-width: 100%;
+}
+
+.video-item .username {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* Estilo do banner */
+#banner{
+    margin-bottom: 2000px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    z-index: 1000px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-image {
+    max-height: 100%;
+}
+
+/* Estilo do logo */
+#logo {
+    width: 150px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Estilo do menu lateral */
+#toolbar {
+    width: 60px; /* Largura inicial da barra lateral */
+    height: 100%; /* Ocupa toda a altura da tela */
+    position: fixed; /* Fixa no canto esquerdo da janela */
+    top: 0;
+    left: 0;
+    background-color: #213a4b; /* Cor de fundo */
+    color: white;
+    z-index: 1000; /* Certifica-se de que está acima de outros elementos */
+    overflow: hidden; /* Esconde conteúdos que ultrapassarem a largura inicial */
+    transition: width 0.3s ease; /* Suaviza o efeito de expansão */
+}
+
+#toolbar img {
+    width: 40px; /* Tamanho da imagem */
+    height: 40px;
+    transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+#toolbar:hover {
+    width: 150px; /* Expande a largura quando o mouse está sobre a barra */
+}
+
+#toolbar nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 80px 0; /* Adiciona um espaçamento superior para evitar sobreposição com o banner */
+}
+
+#toolbar nav ul li {
+    margin-bottom: 15px;
+    padding: 10px; /* Espaçamento interno do item */
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer; /* Mostra o ponteiro de link ao passar o mouse */
+    white-space: nowrap; /* Impede que o texto quebre em múltiplas linhas */
+    color: white;
+    text-decoration: none; /* Remove o sublinhado do texto */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto e o ícone */
+    gap: 10px; /* Espaço entre o ícone e o texto */
+    transition: background-color 0.3s ease; /* Suaviza a mudança de cor do fundo */
+}
+
+#toolbar nav ul li:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+    transition-duration: 0.3;
+}
+
+#toolbar nav ul li:hover img {
+    transform: scale(1.3); /* Amplia o ícone ao passar o mouse */
+    transform: translateX(50%);
+}

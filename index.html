@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Comunidade de Vídeos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="banner">
+        <img src="banner.jfif" alt="Banner do Canal" class="banner-image">
+    </header>
+    <aside id="toolbar">
+        <nav>
+            <ul>
+                <a href="http://127.0.0.1:5500/index.html" target="_blank"><li><img src="homeIcon.png" alt=""></li></a>
+                <a href="https://www.twitch.tv/shiroxman" target="_blank"><li><img src="ttvIcon.png" alt=""></li></a>
+                <a href="https://discord.com/invite/D6c4JeBGHD" target="_blank"><li><img src="discordIcon.png" alt=""></li></a>
+                <a href="https://www.instagram.com/shirobrx/" target="_blank"><li><img src="instagramIcon.png" alt=""></li></a>
+            </ul>
+        </nav>
+    </aside>
+    <div id="app">
+        <img src="perfil.enc" alt="Logo do Canal" id="logo">
+        <h1>Comunidade de Vídeos</h1>
+        <form id="videoForm">
+            <input type="text" id="userName" placeholder="Digite seu nome" required />
+            <input type="url" id="videoLink" placeholder="Cole o link do vídeo" required />
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="videos-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
